@@ -279,6 +279,9 @@ public abstract class Jzvd extends FrameLayout implements View.OnClickListener, 
                         long totalTimeDuration = getDuration();
 //                        double yddis= ((deltaX * totalTimeDuration)*0.4) / mScreenWidth;
                         double yddis= 10000;
+                        if(deltaX < 0){
+                            yddis = -yddis;
+                        }
                         mSeekTimePosition = (int) (mGestureDownPosition + yddis);
 //                        Log.e("zjn"," 跳转时间 " + yddis + " 当前位置 " + mGestureDownPosition);
                         if (mSeekTimePosition > totalTimeDuration)
